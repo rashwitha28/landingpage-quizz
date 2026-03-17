@@ -139,20 +139,19 @@
         <div class="container">
             <div class="row ">
 
-                <!-- About -->
                 <div class="col-md-6 col-lg-3 m-auto">
                     <h3>QuizMaster</h3>
                     <p>The ultimate quiz app for knowledge enthusiasts. Test yourself, challenge friends, and become a
                         champion!</p>
                     <div class="social-icons">
-                        <span>📘</span>
-                        <span>🐦</span>
-                        <span>📷</span>
-                        <span>▶️</span>
+                        <span><i class="bi bi-facebook"></i></span>
+                        <span><i class="bi bi-twitter"></i></span>
+                        <span><i class="bi bi-instagram"></i></span>
+                        <span><i class="bi bi-youtube"></i></span>
                     </div>
                 </div>
 
-                <!-- Quick Links -->
+
                 <div class="col-md-6 col-lg-3 me-1">
                     <h3>Quick Links</h3>
                     <ul>
@@ -164,7 +163,6 @@
                     </ul>
                 </div>
 
-                <!-- Contact -->
                 <div class="col-md-6 col-lg-3 me-1">
                     <h3>Company</h3>
                     <ul>
@@ -180,191 +178,10 @@
 
             <div class="footer-bottom text-center mt-5 pb-3">
                 <p>&copy; 2025 QuizMaster. All rights reserved.</p>
-                <p class="mt-2 ">Made with ❤️ for quiz enthusiasts worldwide</p>
+                <p class="mt-2 ">Made with <i class="bi bi-suit-heart-fill"></i> for quiz enthusiasts worldwide</p>
             </div>
         </div>
     </footer>
-    
-    <!-- Buy Modal 1-->
-<div class="modal fade" id="buyModal1" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
+    </body>
 
-      <div class="modal-header">
-        <h5 class="modal-title">Get Started</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-
-      <div class="modal-body">
-
-        <div class="mb-3">
-          <label>Name</label>
-          <input type="text" class="form-control" id="name1">
-        </div>
-
-        <div class="mb-3">
-          <label>Phone Number</label>
-          <input type="number" class="form-control" id="phone1">
-        </div>
-
-        <div class="mb-3">
-          <label>Email</label>
-          <input type="email" class="form-control" id="email1">
-        </div>
-
-        <div class="mb-3">
-          <label>Message</label>
-          <textarea class="form-control" id="message1"></textarea>
-        </div>
-
-      </div>
-
-      <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-        <button class="btn btn-dark" onclick="submitForm(1,'Free',0)">Install Now</button>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-
-<!-- Buy Modal 2 -->
-<div class="modal fade" id="buyModal2" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-
-      <div class="modal-header">
-        <h5 class="modal-title">Get Started</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-
-      <div class="modal-body">
-
-        <div class="mb-3">
-          <label>Name</label>
-          <input type="text" class="form-control" id="name2">
-        </div>
-
-        <div class="mb-3">
-          <label>Phone Number</label>
-          <input type="number" class="form-control" id="phone2">
-        </div>
-
-        <div class="mb-3">
-          <label>Email</label>
-          <input type="email" class="form-control" id="email2">
-        </div>
-
-        <div class="mb-3">
-          <label>Pay</label>
-          <h4>₹29.99</h4>
-        </div>
-
-        <div class="mb-3">
-          <label>Message</label>
-          <textarea class="form-control" id="message2"></textarea>
-        </div>
-
-      </div>
-
-      <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-        <button class="btn btn-dark" onclick="submitForm(2,'Pro',29.99)">Install Now</button>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-
-<!-- Buy Modal 3 -->
-<div class="modal fade" id="buyModal3" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-
-      <div class="modal-header">
-        <h5 class="modal-title">Get Started</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-
-      <div class="modal-body">
-
-        <div class="mb-3">
-          <label>Name</label>
-          <input type="text" class="form-control" id="name3">
-        </div>
-
-        <div class="mb-3">
-          <label>Phone Number</label>
-          <input type="number" class="form-control" id="phone3">
-        </div>
-
-        <div class="mb-3">
-          <label>Email</label>
-          <input type="email" class="form-control" id="email3">
-        </div>
-
-        <div class="mb-3">
-          <label>Pay</label>
-          <h4>₹99.00</h4>
-        </div>
-
-        <div class="mb-3">
-          <label>Message</label>
-          <textarea class="form-control" id="message3"></textarea>
-        </div>
-
-      </div>
-
-      <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-        <button class="btn btn-dark" onclick="submitForm(3,'Premium',99)">Install Now</button>
-      </div>
-
-    </div>
-  </div>
-</div>
-<script>
-  function submitForm(id,plan,price){
-
-let name = document.getElementById("name"+id).value
-let phone = document.getElementById("phone"+id).value
-let email = document.getElementById("email"+id).value
-let message = document.getElementById("message"+id).value
-
-fetch("http://127.0.0.1:8000/api/install/",{
-
-method:"POST",
-
-headers:{
-"Content-Type":"application/json"
-},
-
-body:JSON.stringify({
-name:name,
-phone:phone,
-email:email,
-message:message,
-plan:plan,
-price:price
-})
-
-})
-.then(response => response.json())
-.then(data => {
-
-alert("Request Submitted Successfully ✅")
-
-})
-.catch(error => {
-
-alert("Error submitting form ❌")
-
-})
-
-}
-
-</script>
-</body>
 </html>
